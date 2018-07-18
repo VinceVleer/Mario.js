@@ -4,12 +4,10 @@ var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
 
 var size = [
-	{ x: 16, y: 16 },
+	{ x: 16, y: 16, s: 16 },
 ];
 
-var scaling = 16;
-
-const pallete = [
+const palette = [
 	"#FFFFFF",
 	"#A52A2A",
 	"#FFD700",
@@ -38,8 +36,8 @@ const sprite = [
 function drawMario(){
 	for (let q = 0; q < size[0].y; q++) {
 		for (let i = 0; i < size[0].x; i++) {
-			c.fillStyle = pallete[sprite[i+(q*16)]];
-			c.fillRect(i*scaling,q*scaling,1*scaling,1*scaling);
+			c.fillStyle = palette[sprite[i+(q*16)]];
+			c.fillRect(i*size[0].s,q*size[0].s,1*size[0].s,1*size[0].s);
 		}
 	}
 }
