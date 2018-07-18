@@ -33,13 +33,11 @@ const sprite = [
 	0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 3, 3, 3, 3, 0, 0
 ];
 
-function drawMario(){
+(function drawMario(){
 	for (let q = 0; q < size[0].y; q++) {
 		for (let i = 0; i < size[0].x; i++) {
 			c.fillStyle = palette[sprite[i+(q*16)]];
 			c.fillRect(i*size[0].s,q*size[0].s,1*size[0].s,1*size[0].s);
 		}
 	}
-}
-
-drawMario();
+})();
