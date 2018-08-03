@@ -41,6 +41,9 @@ module.exports = function(grunt) {
 			},
 		},
 		uglify: {
+			options: {
+				mangle: false
+			},
 			my_target: {
 				files: {
 					'build/superMario.js': ['build/superMario.js']

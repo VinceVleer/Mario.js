@@ -1,6 +1,6 @@
 var currentSprite = 4;
 
-var xPos = 120;
+var xPos = 16;
 var yPos = 0;
 var isOnGround = false;
 
@@ -48,7 +48,8 @@ function drawMario(){
 
 	if (input.a === true) {
 		isOnGround = false;
-		yPos = 0;
+		yPos--;
+		yPos = (yPos / 1.2);
 	};
 
 	if (isOnGround === false) {
