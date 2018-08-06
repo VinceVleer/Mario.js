@@ -1,5 +1,5 @@
 function drawSpriteLayer(){
-	// drawMario();
+	drawMario();
 	drawQstBlock(8, 9);
 	drawBrick(11,9);
 	drawQstBlock(12, 9);
@@ -11,7 +11,7 @@ function drawSpriteLayer(){
 
 	// spriteViewer(0,0,0,0);
 
-	// if (input.right === true || input.left === true) {
-	// 	moveMario();
-	// }
+	if (input.right === true || input.left === true) {
+		moveMario();
+	}
 }

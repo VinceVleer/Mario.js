@@ -1,4 +1,5 @@
 var currentSprite = 4;
+var frame = 0;
 
 var xPos = 16;
 var yPos = 0;
@@ -20,7 +21,12 @@ function moveMario(){
 		xPos+=direction;
 	}
 
-	currentSprite++;
+	frame++;
+
+	if (frame > 2) {
+		currentSprite++;
+		frame = 0;
+	}
 
 	if (currentSprite > 3) {
 		currentSprite = 1

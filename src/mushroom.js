@@ -20,6 +20,10 @@ function drawMushroom(x,y){
 		dist-=256+y;
 	}
 
+	if (dist>192) {
+		dist = 192;
+	}
+
 	for (let q = 0; q < objects.mushroom.size[0].y; q++) {
 		for (let z = 0; z < objects.mushroom.size[0].x; z++) {
 			c.fillStyle = objects.mushroom.palette[0][objects.mushroom.sprite[0][z+(q*objects.mushroom.size[0].x)]];
@@ -28,11 +32,11 @@ function drawMushroom(x,y){
 	}
 
 	//debug info
-	console.clear();
-	console.log('frame = ' + tick);
-	console.log('passed time = ' + Math.round(time*10)/10 + 's');
-	console.log('current speed = ' + Math.round(speed) + 'm/s');
-	console.log('current speed = ' + Math.round(speed*3.6) + 'km/h');
-	console.log('Y position = ' + dist);
+	// console.clear();
+	// console.log('frame = ' + tick);
+	// console.log('passed time = ' + Math.round(time*10)/10 + 's');
+	// console.log('current speed = ' + Math.round(speed) + 'm/s');
+	// console.log('current speed = ' + Math.round(speed*3.6) + 'km/h');
+	// console.log('Y position = ' + dist);
 
 }
